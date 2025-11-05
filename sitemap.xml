@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://martantoine.github.io/posts/about/</loc>
+    <lastmod>2025-11-01T18:28:01-07:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/</loc>
+    <lastmod>2025-11-01T18:28:01-07:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/posts/</loc>
+    <lastmod>2025-11-01T18:28:01-07:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/posts/quadruped/</loc>
+    <lastmod>2024-06-01T18:28:01-07:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/posts/5dofsarm/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/categories/</loc>
+  </url><url>
+    <loc>https://martantoine.github.io/tags/</loc>
+  </url>
+</urlset>
