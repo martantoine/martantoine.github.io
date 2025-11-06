@@ -2,17 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://martantoine.github.io/posts/about/</loc>
-    <lastmod>2025-11-01T18:28:01-07:00</lastmod>
-  </url><url>
     <loc>https://martantoine.github.io/</loc>
-    <lastmod>2025-11-01T18:28:01-07:00</lastmod>
+    <lastmod>2024-06-01T18:28:01-07:00</lastmod>
   </url><url>
     <loc>https://martantoine.github.io/posts/</loc>
-    <lastmod>2025-11-01T18:28:01-07:00</lastmod>
+    <lastmod>2024-06-01T18:28:01-07:00</lastmod>
   </url><url>
     <loc>https://martantoine.github.io/posts/quadruped/</loc>
     <lastmod>2024-06-01T18:28:01-07:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/posts/duplobuster/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/posts/sas/</loc>
+    <lastmod>2021-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/posts/tripoli_lvl1/</loc>
+    <lastmod>2021-06-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://martantoine.github.io/posts/io_rocket_avionic/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://martantoine.github.io/posts/5dofsarm/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
