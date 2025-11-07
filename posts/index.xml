@@ -6,8 +6,15 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2024 18:28:01 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://martantoine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OptiMARS</title>
+      <link>https://martantoine.github.io/posts/optimars/</link>
+      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://martantoine.github.io/posts/optimars/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Quadruped Robot with Tensegrity Joints actuated via Pneumatic Artificial Muscles</title>
       <link>https://martantoine.github.io/posts/quadruped/</link>
