@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Category A on </title>
+    <link>http://localhost:40581/categories/category-a/</link>
+    <description>Recent content in Category A on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:40581/categories/category-a/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OptiMARS</title>
+      <link>http://localhost:40581/posts/optimars/</link>
+      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:40581/posts/optimars/</guid>
+      <description>&lt;h2 id=&#34;in-short&#34;&gt;In short&lt;/h2&gt;&#xA;&lt;h3 id=&#34;dev-a-digital-twin-to-optimize-tool-dimensions--motions&#34;&gt;Dev. a Digital Twin to optimize tool dimensions &amp;amp; motions&lt;/h3&gt;&#xA;&lt;p&gt;Monte Carlo, Mujoco, GUI, C++, Inverse Kinematics, Non Linear Optimization&lt;/p&gt;&#xA;&lt;h3 id=&#34;dev-algorithms-to-improve-the-collaborative-capabilities-of-the-kuka-arms&#34;&gt;Dev. algorithms to improve the collaborative capabilities of the KUKA arms&lt;/h3&gt;&#xA;&lt;p&gt;Java, Python, GUI, UDP, RTI DDS, Linux, V&amp;amp;V&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

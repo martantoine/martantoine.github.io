@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>V&amp;V on </title>
+    <link>https://martantoine.github.io/tags/vv/</link>
+    <description>Recent content in V&amp;V on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://martantoine.github.io/tags/vv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OptiMARS</title>
+      <link>https://martantoine.github.io/posts/optimars/</link>
+      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://martantoine.github.io/posts/optimars/</guid>
+      <description>&lt;h2 id=&#34;in-short&#34;&gt;In short&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dev. a Digital Twin to optimize tool dimensions &amp;amp; motions&lt;/li&gt;&#xA;&lt;li&gt;Dev. algorithms to improve the collaborative capabilities of the KUKA arms&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

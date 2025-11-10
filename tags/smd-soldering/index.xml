@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SMD Soldering on </title>
+    <link>https://martantoine.github.io/tags/smd-soldering/</link>
+    <description>Recent content in SMD Soldering on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://martantoine.github.io/tags/smd-soldering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sensor Acquisition System</title>
+      <link>https://martantoine.github.io/posts/sas/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://martantoine.github.io/posts/sas/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
