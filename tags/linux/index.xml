@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on </title>
-    <link>https://martantoine.github.io/tags/linux/</link>
-    <description>Recent content in Linux on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://martantoine.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>OptiMARS</title>
-      <link>https://martantoine.github.io/posts/optimars/</link>
-      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://martantoine.github.io/posts/optimars/</guid>
-      <description>&lt;h2 id=&#34;in-short&#34;&gt;In short&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Dev. a Digital Twin to optimize tool dimensions &amp;amp; motions&lt;/li&gt;&#xA;&lt;li&gt;Dev. algorithms to improve the collaborative capabilities of the KUKA arms&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Antoine Martin's Blog</title><link>https://martantoine.github.io/tags/linux/</link><description>Recent content in Linux on Antoine Martin's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://martantoine.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>OptiMARS</title><link>https://martantoine.github.io/posts/optimars/</link><pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate><guid>https://martantoine.github.io/posts/optimars/</guid><description>&lt;h2 id="in-short"&gt;In short&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dev. a Digital Twin to optimize tool dimensions &amp;amp; motions&lt;/li&gt;
+&lt;li&gt;Dev. algorithms to improve the collaborative capabilities of the KUKA arms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The MARS surgical system enhances minimally invasive procedures through magnetic fields and robotic automation. The system&amp;rsquo;s surgical effectiveness is directly tied to the robot kinematics behavior. For this reason, this research refines the target controller to improve positional consistency, a solution already tested and awaiting deployment. Additionally, OptiMARS, a Monte Carlo-based simulator, was developed to optimize kinematic parameters such as cart placement and tool dimensions. This simulator incorporates patient-specific variations (e.g. BMI, incision location) and replicates the real system’s motion controller behavior, enabling relevant kinematic optimization. Initial optimization efforts have yielded a set of optimized cart placement positions that can be used during a new alignment procedure. The work delivers immediate improvements while establishing a scalable framework for future enhancements, ensuring the MARS system can evolve alongside clinical advancements.&lt;/p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/optimars/editor.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="key-achievements"&gt;Key Achievements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Creation of a high-fidelity digital twin model of the operating room&lt;/li&gt;
+&lt;li&gt;Simulation of the physical environment, including collision detection and Jacobian evaluation&lt;/li&gt;
+&lt;li&gt;GUI-based editing and visualization of the digital twin&lt;/li&gt;
+&lt;li&gt;Implementation of inverse kinematics for the robotic arms&lt;/li&gt;
+&lt;li&gt;Execution of non-linear optimization algorithms to optimize cart placement and tool dimensions&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

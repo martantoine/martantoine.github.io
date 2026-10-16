@@ -1,19 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Solidworks on </title>
-    <link>https://martantoine.github.io/tags/solidworks/</link>
-    <description>Recent content in Solidworks on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://martantoine.github.io/tags/solidworks/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>5 DOFs Robotic Arm</title>
-      <link>https://martantoine.github.io/posts/5dofsarm/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://martantoine.github.io/posts/5dofsarm/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Solidworks on Antoine Martin's Blog</title><link>https://martantoine.github.io/tags/solidworks/</link><description>Recent content in Solidworks on Antoine Martin's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://martantoine.github.io/tags/solidworks/index.xml" rel="self" type="application/rss+xml"/><item><title>5 DOFs Robotic Arm</title><link>https://martantoine.github.io/posts/5dofsarm/</link><pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate><guid>https://martantoine.github.io/posts/5dofsarm/</guid><description>&lt;h2 id="description"&gt;Description&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h3 id="-warning"&gt;⚠️ Warning&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; This post describes a project known to be of very low quality. You might experience nausea while reading it.&lt;/p&gt;
+&lt;p&gt;.. This is an old project from high-school. Back then I had no idea about how to properly engineer anything, more specifically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how to properly design a robot (e.g: torque balancing)&lt;/li&gt;
+&lt;li&gt;concurrent motor control (everything runs in a single thread..)&lt;/li&gt;
+&lt;li&gt;inverse kinematic, it is totally missing here -_-&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This project is about designing and manufacturing a simple 5 DOFs robotic arm.&lt;/p&gt;
+&lt;p&gt;It uses one servomotor for each degree of freedom, all controlled and powered by the Arduino Mega 2560.&lt;/p&gt;
+&lt;p&gt;There are 4 push buttons that can be used to manually control each degree of freedom separately.&lt;/p&gt;
+&lt;h2 id="final-result"&gt;Final result&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%201.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%202.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%203.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="robots-ability-demonstration"&gt;Robot&amp;rsquo;s ability demonstration&lt;/h2&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/cover.gif"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="manual-control"&gt;Manual control&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/manual.gif"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+Controlled by pressing on those 4 buttons&lt;/p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%204.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="a-few-3d-renders"&gt;A few 3d renders&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/FilaireFrontColored.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/FilaireSideColored.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Perspective_1.JPG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Perspective_2.JPG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description></item></channel></rss>

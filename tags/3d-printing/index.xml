@@ -1,33 +1,317 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>3D Printing on </title>
-    <link>https://martantoine.github.io/tags/3d-printing/</link>
-    <description>Recent content in 3D Printing on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://martantoine.github.io/tags/3d-printing/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>DuploBuster</title>
-      <link>https://martantoine.github.io/posts/duplobuster/</link>
-      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://martantoine.github.io/posts/duplobuster/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rocket Tripoli Lvl 1</title>
-      <link>https://martantoine.github.io/posts/tripoli_lvl1/</link>
-      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>https://martantoine.github.io/posts/tripoli_lvl1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>5 DOFs Robotic Arm</title>
-      <link>https://martantoine.github.io/posts/5dofsarm/</link>
-      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://martantoine.github.io/posts/5dofsarm/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3D Printing on Antoine Martin's Blog</title><link>https://martantoine.github.io/tags/3d-printing/</link><description>Recent content in 3D Printing on Antoine Martin's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://martantoine.github.io/tags/3d-printing/index.xml" rel="self" type="application/rss+xml"/><item><title>DuploBuster</title><link>https://martantoine.github.io/posts/duplobuster/</link><pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate><guid>https://martantoine.github.io/posts/duplobuster/</guid><description>&lt;h2 id="competition-specifications"&gt;Competition Specifications&lt;/h2&gt;
+&lt;p&gt;The goal of this competition is to create an autonomous robot able to gather Duplo toys and drop them in the collection zone of the 8x8 meters arena that features obstacles and different terrains.
+The room have four different regions with different color LEDs in every corner. The robot have 10 minutes inside the room to collect as many Duplo as it can.&lt;/p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/Arena.png"
+alt=""
+loading="lazy"
+style="max-width: 700px; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="how-the-robot-collects-duplo"&gt;How the robot collects Duplo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A claw grips the toy and elevates it into it&amp;rsquo;s compartment&lt;/li&gt;
+&lt;li&gt;Once the Duplo has picked up enough toys it releases them at the dropping zone by opening it&amp;rsquo;s door&lt;/li&gt;
+&lt;li&gt;The front camera uses machine learning to recognize Duplos while a LIDAR scans the environment for obstacles&lt;/li&gt;
+&lt;li&gt;A 360° top camera gives the position and angle while an A* algorithm deduces it&amp;rsquo;s trajectory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="object-detection"&gt;Object Detection&lt;/h2&gt;
+&lt;h3 id="problem-introduction"&gt;Problem Introduction&lt;/h3&gt;
+&lt;p&gt;The duplo are localized using deep learning. In fact the Duplo comes in big variety of colors and shapes, making feature detection algorithm impractical in this situation.&lt;/p&gt;
+&lt;h3 id="dataset"&gt;Dataset&lt;/h3&gt;
+&lt;p&gt;Pictures of Duplo in the arena were captured using the same camera (Raspberry Pi Camera V2.1) that would then eventually be used for the inference.&lt;/p&gt;
+&lt;p&gt;A total of &lt;strong&gt;600&lt;/strong&gt; pictures were capture, after deleting the non usable one, &lt;strong&gt;523&lt;/strong&gt; remained.&lt;/p&gt;
+&lt;p&gt;The dataset was labelled on the free to use online platform &lt;em&gt;Roboflow&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id="policy-training"&gt;Policy Training&lt;/h3&gt;
+&lt;p&gt;The framework used for target identification is &lt;strong&gt;YoloV6&lt;/strong&gt; (&lt;strong&gt;YOLOv6-N&lt;/strong&gt; to be exact), it is the lightest and fastest to run model among all others (works with \textbf{640x640} pixels pictures). The policy was trained on &lt;em&gt;Google Colab&lt;/em&gt; and exported to the &lt;em&gt;ONNX&lt;/em&gt; format for inference.&lt;/p&gt;
+&lt;h3 id="results"&gt;Results&lt;/h3&gt;
+&lt;p&gt;The raw inference performance are the following:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;True positive&lt;/th&gt;
+&lt;th&gt;False positive&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;83%&lt;/td&gt;
+&lt;td&gt;0%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/input.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/output.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="electronics"&gt;Electronics&lt;/h2&gt;
+&lt;h3 id="sensor-list"&gt;Sensor list&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ultrasonic Distance Sensor HCS04 x 2&lt;/li&gt;
+&lt;li&gt;Microswitch Sensor x 4&lt;/li&gt;
+&lt;li&gt;MPU-9150&lt;/li&gt;
+&lt;li&gt;RPLIDAR A1M8&lt;/li&gt;
+&lt;li&gt;Raspberry Pi Camera V2.1&lt;/li&gt;
+&lt;li&gt;Webcam Logitech C720&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="actuator-list"&gt;Actuator list&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Maxon EC 32 flat (15 W), 1:60 gearbox&lt;/li&gt;
+&lt;li&gt;DC motor x 2&lt;/li&gt;
+&lt;li&gt;Stepper motor&lt;/li&gt;
+&lt;li&gt;Buzzer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most of those sensors and actuators are interfaced through &lt;strong&gt;I2C&lt;/strong&gt;, &lt;strong&gt;SPI&lt;/strong&gt;, &lt;strong&gt;PWM&lt;/strong&gt; and &lt;strong&gt;Serial&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A STM32F4 is used for interfacing with the sensors and actuators in realtime.&lt;/p&gt;
+&lt;p&gt;A Raspberry Pi 4 Model B is used for more resource intensive task (e.g. computer vision).&lt;/p&gt;
+&lt;h3 id="connections-diagram"&gt;Connections diagram&lt;/h3&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/electronic.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h3 id="electronic-assembly"&gt;Electronic assembly&lt;/h3&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/result_elec.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Maxon 24/2 controller&lt;/li&gt;
+&lt;li&gt;DC Driver 15x2 Lite&lt;/li&gt;
+&lt;li&gt;Raspberry Pi Camera V2.1&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 4 Model B&lt;/li&gt;
+&lt;li&gt;Nucleo F446&lt;/li&gt;
+&lt;li&gt;Breadboard + IMU + AMIS-30543&lt;/li&gt;
+&lt;li&gt;Power Board&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="custom-pcb"&gt;Custom PCB&lt;/h3&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/aci_pcb.jpeg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+connects sensors and actuators with the MCU and Raspberry Pi.&lt;/p&gt;
+&lt;h2 id="some-hardware-details"&gt;Some hardware details&lt;/h2&gt;
+&lt;h3 id="lidar"&gt;LIDAR&lt;/h3&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/LIDAR.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h3 id="the-claw-grasps-the-duplo"&gt;The claw (grasps the Duplo)&lt;/h3&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/claws.jpeg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h3 id="driving-wheels"&gt;Driving wheels&lt;/h3&gt;
+&lt;p&gt;The front wheels are 3D printed using TPU
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/front_wheel.png"
+alt=""
+loading="lazy"
+style="max-width: 700px; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/duplobuster/coupler.jpeg"
+alt=""
+loading="lazy"
+style="max-width: 700px; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description></item><item><title>Rocket Tripoli Lvl 1</title><link>https://martantoine.github.io/posts/tripoli_lvl1/</link><pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate><guid>https://martantoine.github.io/posts/tripoli_lvl1/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Tripoli rocket certification level 1 is obtained by successfully manufacturing, launching and recovering (using a single parachute) a rocket of a certain power.
+I choose to design the rocket myself for budget and experience reasons.
+So far, I have completed the structure design and started manufacturing it.&lt;/p&gt;
+&lt;p&gt;I wanted my rocket to be able to pass the level 1 and level 2 certifications (level 2 requires a drog chute and a main chute) with only slight modifications to do on the rocket.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s all for the introduction, let&amp;rsquo;s dive in the design phase.&lt;/p&gt;
+&lt;h2 id="design"&gt;Design&lt;/h2&gt;
+&lt;h3 id="dimensions"&gt;Dimensions&lt;/h3&gt;
+&lt;p&gt;The rocket was design on &lt;a href="https://openrocket.info/"&gt;OpenRocket&lt;/a&gt;, the main specs are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tube diameter : 10.2cm&lt;/li&gt;
+&lt;li&gt;rocket length : 159cm&lt;/li&gt;
+&lt;li&gt;fin number : 4&lt;/li&gt;
+&lt;li&gt;level 1&amp;rsquo;s stability: 2.33&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/tripoli_lvl1/open_rocket_2d.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/tripoli_lvl1/open_rocket_3d.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id="nose-cone"&gt;Nose cone&lt;/h3&gt;
+&lt;p&gt;The nose cone is a Von Kármán profile (except the nose-tip which is a sphere) specificaly designed to minimize the drag for a given length and diameter.
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/tripoli_lvl1/cad_nose_cone.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id="choc-cord-and-their-fixation"&gt;Choc cord and their fixation&lt;/h3&gt;
+&lt;p&gt;The best choc cords are made out of kevlar but cost money, thus I wanted them to be interchangeable.
+Moreover, it would then be possible to switch the chute without having to undo the knot between the cord and the chute but rather unlock the karabiner between the cord and the rocket&amp;rsquo;s structure.&lt;/p&gt;
+&lt;h3 id="propulsion-sub-assembly"&gt;Propulsion sub-assembly&lt;/h3&gt;
+&lt;p&gt;The fins must be strongly fixed to the rocket because of the heavily loads a slight angle in the rocket trajectory would produce.&lt;/p&gt;
+&lt;p&gt;The fixation I came up with is a mix of interlocking and gluing to have the maximum rigidity.
+The interlocking takes place on each fins at 3 contacts : the contact between the fin and the middle-centering-ring, the bottom-centering-ring and the retainer-ring.
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/tripoli_lvl1/propulsion_sub-assembly_full.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/tripoli_lvl1/propulsion_sub-assembly_fixation.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id="avionic-bay"&gt;Avionic bay&lt;/h3&gt;
+&lt;p&gt;Avionic is necessary to trigger the explosive charges needed to deploy the chutes&lt;/p&gt;
+&lt;p&gt;Moreover, the electronic must be easily put in and out of the avionic bay (the electronic is fastened on the long rods)&lt;/p&gt;
+&lt;p&gt;The bottom bulkhead is glued to the bay&amp;rsquo;s tube in opposite to the top bulkhead which is just matted with the tube.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s thus possible to remove the whole avionic by just unscrewing the bolts under the bottom bulkhead (pictures below).
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/tripoli_lvl1/avionic_bay.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/tripoli_lvl1/avionic_bay_dissassembled.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="manufacturing"&gt;Manufacturing&lt;/h2&gt;
+&lt;h3 id="nose-cone-1"&gt;Nose Cone&lt;/h3&gt;
+&lt;p&gt;The nose cone is a complex shape, I choose to 3d print on the Prusa i3 mk3 as a one layer shell with a continuous rising of the Z axis (vase mode).
+Once printed, the nose-cone wasn&amp;rsquo;t strong enough and the surface roughness was very high (I want the smoothest surface possible to have a nice glossy paint).
+I applied epoxy usualy used for lamination on the inner and outer side of the shell, making it stronger and smoother (require some grinding though).&lt;/p&gt;
+&lt;p&gt;Still it is not strong enough, to make it sturdier, I could :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pour foam in the inner shell&lt;/li&gt;
+&lt;li&gt;add some renforcements on the inner shell and pour foam in the inner shell&lt;/li&gt;
+&lt;li&gt;add layer(s) of fiber glass in the nose cone
+I haven&amp;rsquo;t definitively choose yet the solution, but I&amp;rsquo;m pretty sure I will go for the third one (most of the people in the EPFL Rocket Team uses this solution, moreover I have at last a mask for composite)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="tube"&gt;Tube&lt;/h3&gt;
+&lt;p&gt;The tube are made out of phenolic cardboard, some kind of super cardboard
+I use one tube of 91cm long and another of 45.5cm long I cut from a 91cm long tube.
+I then roughly cut the slot for the 4 fins and grind to get the desired width and length.&lt;/p&gt;
+&lt;h3 id="bulkheads"&gt;Bulkheads&lt;/h3&gt;
+&lt;p&gt;In order to rigidify the rocket and other function, bulkheads (which are cylindrical sections glued to the tubes) need to be cut.&lt;/p&gt;
+&lt;p&gt;For this I used a cnc laser cut (this one), and use as the raw material various MDF width plank (3mm, 5mm and 8mm).
+I think I should have make one of the top-centering ring (its a hollow bulkhead) widder in order to prevent its fracture during chute deploying&lt;/p&gt;
+&lt;h3 id="gluing"&gt;Gluing&lt;/h3&gt;
+&lt;p&gt;The bulkheads and tube are glued with epoxy Alderine of cure time 90mn.&lt;/p&gt;</description></item><item><title>5 DOFs Robotic Arm</title><link>https://martantoine.github.io/posts/5dofsarm/</link><pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate><guid>https://martantoine.github.io/posts/5dofsarm/</guid><description>&lt;h2 id="description"&gt;Description&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h3 id="-warning"&gt;⚠️ Warning&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; This post describes a project known to be of very low quality. You might experience nausea while reading it.&lt;/p&gt;
+&lt;p&gt;.. This is an old project from high-school. Back then I had no idea about how to properly engineer anything, more specifically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how to properly design a robot (e.g: torque balancing)&lt;/li&gt;
+&lt;li&gt;concurrent motor control (everything runs in a single thread..)&lt;/li&gt;
+&lt;li&gt;inverse kinematic, it is totally missing here -_-&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This project is about designing and manufacturing a simple 5 DOFs robotic arm.&lt;/p&gt;
+&lt;p&gt;It uses one servomotor for each degree of freedom, all controlled and powered by the Arduino Mega 2560.&lt;/p&gt;
+&lt;p&gt;There are 4 push buttons that can be used to manually control each degree of freedom separately.&lt;/p&gt;
+&lt;h2 id="final-result"&gt;Final result&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%201.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%202.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%203.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="robots-ability-demonstration"&gt;Robot&amp;rsquo;s ability demonstration&lt;/h2&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/cover.gif"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="manual-control"&gt;Manual control&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/manual.gif"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+Controlled by pressing on those 4 buttons&lt;/p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Vue%204.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="a-few-3d-renders"&gt;A few 3d renders&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/FilaireFrontColored.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/FilaireSideColored.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Perspective_1.JPG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/5dofsarm/Perspective_2.JPG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description></item></channel></rss>

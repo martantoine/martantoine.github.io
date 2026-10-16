@@ -1,19 +1,108 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>STM32F4 on </title>
-    <link>https://martantoine.github.io/tags/stm32f4/</link>
-    <description>Recent content in STM32F4 on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://martantoine.github.io/tags/stm32f4/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Sensor Acquisition System</title>
-      <link>https://martantoine.github.io/posts/sas/</link>
-      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>https://martantoine.github.io/posts/sas/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>STM32F4 on Antoine Martin's Blog</title><link>https://martantoine.github.io/tags/stm32f4/</link><description>Recent content in STM32F4 on Antoine Martin's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://martantoine.github.io/tags/stm32f4/index.xml" rel="self" type="application/rss+xml"/><item><title>Sensor Acquisition System</title><link>https://martantoine.github.io/posts/sas/</link><pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate><guid>https://martantoine.github.io/posts/sas/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;h3 id="requirements"&gt;Requirements:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Support up to 16 sensors simultaneous&lt;/li&gt;
+&lt;li&gt;Support different kind of sensors, must be easily upgradable to support new ones&lt;/li&gt;
+&lt;li&gt;Independent conditioning of the signal for each sensor (1 board per sensor)&lt;/li&gt;
+&lt;li&gt;Transmit the data to the computer which will log it&lt;/li&gt;
+&lt;li&gt;Settings must be set from the computer&lt;/li&gt;
+&lt;li&gt;Sampling rate of 1kHz&lt;/li&gt;
+&lt;li&gt;Resolution of 16bits&lt;/li&gt;
+&lt;li&gt;Required supported sensors:
+&lt;ul&gt;
+&lt;li&gt;force sensor using Wheastone bridge&lt;/li&gt;
+&lt;li&gt;Thermocouple&lt;/li&gt;
+&lt;li&gt;Pressure sensor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="project-architecture"&gt;Project Architecture&lt;/h2&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/architecture.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="components"&gt;Components&lt;/h2&gt;
+&lt;p&gt;The list of components used has changed quite a lot thorough the design, I will for the sake of clarity only talk about the final design choice.&lt;/p&gt;
+&lt;h3 id="analog-to-digital-converter"&gt;Analog to Digital Converter&lt;/h3&gt;
+&lt;p&gt;Accordingly to the requirements, the ADC must have 16 physical pins to which the sensors would be always connected.
+Moreover it has to sample each 16 sensors at a resolution of 16 bits at 1kHz.&lt;/p&gt;
+&lt;h3 id="mcu"&gt;MCU&lt;/h3&gt;
+&lt;p&gt;The MCU must validates the following requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2 SPI interface of at least 256 kbits/s (one for the ADC, the other for the USB port)&lt;/li&gt;
+&lt;li&gt;be of the STM32 family (since it&amp;rsquo;s the one mostly used at the ERT)&lt;/li&gt;
+&lt;li&gt;handle a SPI data traffic of 256 kbits/s from the ADC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In order to reduce the workload on the PCB design, the MCU must be already assembled on a board featuring :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;USB interface for transmitting data/debugging/programming of the MCU&lt;/li&gt;
+&lt;li&gt;Header pins such that it can plugged as a shield on the main PCB board&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The chosen MCU is the Nucleo STM32 F446RE.&lt;/p&gt;
+&lt;h3 id="power-supply"&gt;Power Supply&lt;/h3&gt;
+&lt;p&gt;Many voltages are needed : 5V, 3.3V, 9V, 12V.&lt;/p&gt;
+&lt;h2 id="hostboard-a"&gt;Hostboard A&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/Hostboard_A_schema.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/Hostboard_A_pcb3D_1.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/Hostboard_A_pcb3D_2.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+PCBs assembly
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/hostboard_raw.JPG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+Assembled PCBs with test pcb
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/hostboard_assembled.JPG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="daugtherboard"&gt;Daugtherboard&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/Daughterboard_schema.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/Daughterboard_pcb3D_1.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/Daughterboard_pcb3D_2.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="pcbs-assembly"&gt;PCBs assembly&lt;/h2&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/sas/PCBs_assembly.PNG"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;</description></item></channel></rss>

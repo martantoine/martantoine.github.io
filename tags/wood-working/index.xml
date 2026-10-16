@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wood Working on Antoine Martin's Blog</title><link>https://martantoine.github.io/tags/wood-working/</link><description>Recent content in Wood Working on Antoine Martin's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 Apr 2026 18:28:01 -0700</lastBuildDate><atom:link href="https://martantoine.github.io/tags/wood-working/index.xml" rel="self" type="application/rss+xml"/><item><title>Bed frame</title><link>https://martantoine.github.io/posts/bed_frame/</link><pubDate>Wed, 01 Apr 2026 18:28:01 -0700</pubDate><guid>https://martantoine.github.io/posts/bed_frame/</guid><description>&lt;p&gt;TLDR; wood working is hard + time consuming, don&amp;rsquo;t do it unless you find it fun spend waste a month building it.&lt;/p&gt;
+&lt;p&gt;Finally the happy renter of a non furnished flat, it was time to invest into good quality furniture.
+The first mandatory acquisition is of course a matress, and a bed frame too even though many fellow men in their 20s believe the later is not a necessity but more a luxury.&lt;/p&gt;
+&lt;p&gt;Unhappy with the state of the bed frame market that costs less than $1k, I decided to make my own after some stranger I met suggested me to do so.&lt;/p&gt;
+&lt;h2 id="goals-and-inspirations-and-early-design"&gt;Goals and Inspirations and Early Design&lt;/h2&gt;
+&lt;p&gt;Following requirement should be met:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Queen size matress&lt;/li&gt;
+&lt;li&gt;Adequate bed height&lt;/li&gt;
+&lt;li&gt;Fully wood&lt;/li&gt;
+&lt;li&gt;Can serve as a coffee table when in bed (this rerquirement was partially met)&lt;/li&gt;
+&lt;li&gt;Look cool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I came across the brand Scandinavian Design quite randomly, and they turn out to make a bunch of mid century modern style furniture, bed frame included, see pic below:&lt;/p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/inspi.jpeg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;p&gt;I then designed my bed in CAD, with the poor knowledge of what was feasible, trying to take into account the weird inch convention the US sells lumber and hardwood in (a 2x2 is actually a 1.75&amp;quot;x1.75&amp;quot;&amp;hellip;)
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/cad1.jpeg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;With this very elaborate plan in mind and pretty much 0 wood working experience, I was now extremly confident in manufacturing it&lt;/p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/meme.webp"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;h2 id="hardware-mode"&gt;Hardware mode&lt;/h2&gt;
+&lt;p&gt;After some brief introductionary wood working course at the Nexus makerspace in Sunnyvale, I got to work, sawing, filing, gluing my first pieces of wood:
+&lt;div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; justify-content: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/wip1.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/me.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; justify-content: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/room.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/wip2.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;The most frustating piece was the jointure piece that linked the four main wood beams together. It needed to be glued to those beams while holding a fastened metal fixature. I first tried to make then in the same wood as the rest of the bed (redwood), but it turned out to be a very bad idea given the later is really soft and was nearly not strong enough for its purpose.
+Hence I switched for these pieces to oak, a material that is painfully hard to work with..
+&lt;div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; justify-content: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/wip_hard2.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/wip_hard3.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Soon enough (a month later, or roughly 20 evenings where I would work 4hours straight) I was done!
+&lt;div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; justify-content: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/fga2.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;img src="https://martantoine.github.io/posts/bed_frame/fga1.jpeg"
+alt=""
+loading="lazy"
+style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description></item></channel></rss>

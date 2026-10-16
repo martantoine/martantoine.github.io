@@ -1,19 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>PCB Assembly on </title>
-    <link>https://martantoine.github.io/tags/pcb-assembly/</link>
-    <description>Recent content in PCB Assembly on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://martantoine.github.io/tags/pcb-assembly/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Rocket Avionics - EPFL Rocket Team</title>
-      <link>https://martantoine.github.io/posts/io_rocket_avionic/</link>
-      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://martantoine.github.io/posts/io_rocket_avionic/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PCB Assembly on Antoine Martin's Blog</title><link>https://martantoine.github.io/tags/pcb-assembly/</link><description>Recent content in PCB Assembly on Antoine Martin's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://martantoine.github.io/tags/pcb-assembly/index.xml" rel="self" type="application/rss+xml"/><item><title>Rocket Avionics - EPFL Rocket Team</title><link>https://martantoine.github.io/posts/io_rocket_avionic/</link><pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate><guid>https://martantoine.github.io/posts/io_rocket_avionic/</guid><description>&lt;h2 id="project-description"&gt;Project Description&lt;/h2&gt;
+&lt;p&gt;The IO Rocket was a ~ 1.8 meters rocket made by members of the [https://epflrocketteam.ch/our-projects/io/](EPFL Rocket Team - ERT).&lt;/p&gt;
+&lt;p&gt;It wasn&amp;rsquo;t designed for competition purposed but rather to let us learn new skills as many of us building the rocket were in their first or second year of bachelor.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve personnaly worked under the avionic sub-system, more precisely I was tasked to build to PCBs responsible for telemetry and triggering the second explosive charge (to deploy the second chute).&lt;/p&gt;
+&lt;p&gt;It was for me the opportunity to learn the software Altium Designer, a schematic and PCB design software&lt;/p&gt;
+&lt;p&gt;Due to the COVID-19 pandemic, the IO project was ended sooner than expected and we never had the opportunity to rebuild a second enhanced version.&lt;/p&gt;
+&lt;p&gt;In fact, the only IO rocket we&amp;rsquo;ve launched was really rough, see below ;)
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;video controls style="max-width: 100%;"&gt;
+&lt;source src="https://martantoine.github.io/posts/io_rocket_avionic/20200222_170717.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="some-insights-of-the-avionic"&gt;Some insights of the avionic&lt;/h2&gt;
+&lt;p&gt;Components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMU : attitude&lt;/li&gt;
+&lt;li&gt;BMP180 : pressure, altitude, temperature&lt;/li&gt;
+&lt;li&gt;Arduino nano : MCU&lt;/li&gt;
+&lt;li&gt;Lora : Radio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="render_avionic_pcb.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/io_rocket_avionic/cover.png"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id="memories"&gt;Memories..&lt;/h2&gt;
+&lt;p&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/io_rocket_avionic/20200222_164829.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
+&lt;img src="https://martantoine.github.io/posts/io_rocket_avionic/group.jpg"
+alt=""
+loading="lazy"
+style="max-width: 100%; height: auto;"&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description></item></channel></rss>
