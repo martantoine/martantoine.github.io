@@ -7,7 +7,7 @@ alt=""
 loading="lazy"
 style="max-width: 100%; height: auto;"&gt;
 &lt;/div&gt;
-&lt;h2 id="features-dinov2-out-of-the-box"&gt;Features: DINOv2 out of the box&lt;/h2&gt;
+&lt;h2 id="dinov2-features"&gt;DINOv2 Features&lt;/h2&gt;
 &lt;p&gt;The default DINOv2 base model already separates tomato plants from their surroundings well. Below, the red cross marks the selected pixel, and the yellow patches are the ones whose features are most similar to it.&lt;/p&gt;
 &lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
 &lt;img src="https://martantoine.github.io/posts/bootstrapped_feature_mapper/dino_PCA_similarity.png"
@@ -15,7 +15,8 @@ alt=""
 loading="lazy"
 style="max-width: 100%; height: auto;"&gt;
 &lt;/div&gt;
-&lt;h2 id="from-2d-to-3d"&gt;From 2D to 3D&lt;/h2&gt;
+&lt;p&gt;Bonus: I am the proud father of this tomato plant&lt;/p&gt;
+&lt;h2 id="reconstructing"&gt;Reconstructing&lt;/h2&gt;
 &lt;p&gt;COLMAP gives the camera pose for each frame (left), and Depth Anything 3 gives time-coherent depth (right). Each classified patch is projected into 3D using that frame&amp;rsquo;s pose and depth.&lt;/p&gt;
 &lt;div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; justify-content: center; margin: 1.5rem 0;"&gt;
 &lt;img src="https://martantoine.github.io/posts/bootstrapped_feature_mapper/camera_path.png"
@@ -27,7 +28,7 @@ alt=""
 loading="lazy"
 style="flex: 1 1 0; min-width: 0; max-width: 100%; height: auto;"&gt;
 &lt;/div&gt;
-&lt;p&gt;The result is a point cloud of the selected class only:&lt;/p&gt;
+&lt;p&gt;The result is a point cloud of the selected class only on top of the magnficient tomato plant:&lt;/p&gt;
 &lt;div style="text-align: center; margin: 1.5rem 0;"&gt;
 &lt;video controls style="max-width: 100%;"&gt;
 &lt;source src="https://martantoine.github.io/posts/bootstrapped_feature_mapper/result.mov" type="video/mp4"&gt;
